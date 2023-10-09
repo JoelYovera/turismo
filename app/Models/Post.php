@@ -5,10 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Ruta extends Model
+class Post extends Model
 {
     use HasFactory;
-	public $timestamps = false;
 	protected $fillable = [
         'slug',
         'title',
@@ -16,13 +15,8 @@ class Ruta extends Model
 		'nombre',
 		'descripcion',
 		'urlfoto',
+		'urlvideo',
 		'visitas',
-		'orden',
+		'orden'
     ];
-
-	public function Empresa(){
-		return $this->hasMany("App\Models\Empresa");
-	}
-
-
 }

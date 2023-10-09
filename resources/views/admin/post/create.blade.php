@@ -5,7 +5,7 @@
 	<div class="row">
 		@include('admin.menu')
 		<div class="col-sm-10">
-			{!! Form::open(['route'=>['ruta.store'],'method'=>'POST','files'=>true])!!}
+			{!! Form::open(['route'=>['post.store'],'method'=>'POST','files'=>true])!!}
 
 			<div class="jumbotron">
 				<div class="form-group">
@@ -35,8 +35,13 @@
 				</div>
 
 				<div class="form-group">
+					<label for="urlvideo">Ingrese video</label>
+					{!! Form::text('urlvideo',null,['class'=>'form-control'])!!}
+				</div>
+
+				<div class="form-group">
 					<label for="urlfoto">Imagen</label>
-					<img src="/img/ruta/foto.jpg">
+					<img src="/img/post/foto.jpg">
 					{!! Form::file('urlfoto')!!}
 				</div>
 			</div>
